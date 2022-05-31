@@ -1,0 +1,6 @@
+/*Построить предикат grand_so(X, Y), который проверяет,
+является ли X внуком Y. Построить предикат grand_sons(X), который
+выводит всех внуков X.*/
+
+grandson(X,Y):- parent(Z,X), parent(Y,Z), man(X).
+grandsons(X):- grandson(Y,X),write(Y).
