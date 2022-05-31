@@ -1,0 +1,6 @@
+/*Построить предикат grand_pa_and_da(X,Y), который проверяет,
+являются ли X и Y дедушкой и внучкой или внучкой и дедушкой.*/
+
+grandpa_daughter(X,Y):-
+parent(X,Z), parent(Z,Y), woman(Y), man(X) |
+parent(Y,Z), parent(Z,X), woman(X), man(Y).
