@@ -1,0 +1,6 @@
+/* №12. Построить предикат sister(X, Y), который проверяет,
+является ли X сестрой Y. Построить предикат sisters(X), который выводит
+всех сестер X. */
+
+sister(X,Y):- parent(Z,X), parent(Z,Y), woman(X).
+sister(X):- sister(Y,X), woman(Y), write(Y).
